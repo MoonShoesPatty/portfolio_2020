@@ -1,0 +1,18 @@
+#mainWrapper
+{
+    margin: 2vw;
+}
+
+.borderTop,
+.borderLeft,
+.borderRight,
+.borderBottom
+{
+    background-color: white;
+    height: 1vw;
+    width: 10vw;
+}
+.borderTop
+{
+
+}
