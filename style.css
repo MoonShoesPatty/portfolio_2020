@@ -31,10 +31,6 @@ main {
     display: flex;
     flex-direction: column;
     background-image: radial-gradient(ellipse closest-side, rgba(255,255,255,0.075), transparent);
-    /* animation: 2.5s ease-out 2.5s forwards titleTextFadeIn; */
-    /* border-radius: 50%;
-    box-shadow: 0 0 25vw white;
-    background-color: rgba(255,255,255,0.5); */
 }
 .headerText, .headerSub {
     margin: 0;
@@ -107,10 +103,6 @@ main {
     display: inline-block;
     border: 1.5px solid black;
     transition: background-color 1s ease-out;
-}
-.square.squareHover, .square.squareHover01, .square.squareHover02 {
-    /* transition: background-color 0.05s ease-out; */
-    transition: none;
 }
 
 .squaresRow {

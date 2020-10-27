@@ -46,7 +46,6 @@ function createSquares() {
     for (var i = 0; i < sqsPerCol; i++) {
         squaresArray[i] = [];
         var rowContainer = $('<div class="squaresRow"></div>').appendTo(container);
-        // rowContainer.width(sqsPerRow * SQUARE_SIZE);
         rowsArray[i] = rowContainer;
         // Fill the row with squares
         for (var j = 0; j < sqsPerRow; j++) {
