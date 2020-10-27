@@ -2,102 +2,126 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-body
-{
-    background-color: black;
-    overflow: hidden;
-    margin: 0;
-    padding : 0;
+body {
+    font-family: "Josefin sans", sans-serif;
+    font-variant: small-caps;
 }
 
-#mainWrapper
-{
-    position: relative;
-    /* top: 1vw;
-    left: 1vw;
-    right: 1vw;
-    bottom: 1vw; */
-    /* border: 1px solid red; */
-    margin: 15px;
-    height: calc(100vh - 30px);
-    width: calc(100vw - 30px);
-}
-.nameHeader
-{
-    color: white;
-}
-
-.borderTop,
-.borderLeft,
-.borderRight,
-.borderBottom
-{
-    background-color: white;
+.splashContainer {
     position: absolute;
-}
-.borderTop
-{
-    height: 3px;
-    left: 0;
-    animation: 1s linear forwards topBar;
-}
-.borderBottom
-{
-    height: 3px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    animation: 1s linear forwards bottomBar;
-}
-.borderLeft
-{
-    width: 3px;
-    /* top: 0; */
-    bottom: 0;
-    animation: 1s linear 1s forwards leftBar;
-}
-.borderRight
-{
-    width: 3px;
     top: 0;
-    /* bottom: 0; */
+    bottom: 0;
+    left: 0;
     right: 0;
-    animation: 1s linear 1s forwards rightBar;
 }
 
-@keyframes topBar
-{
-    0% {
-        right: 100%;
-    }
-    100% {
-        right: 0;
-    }
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
 }
-@keyframes bottomBar
-{
-    0% {
-        left: 100%;
-    }
-    100% {
-        left: 0;
-    }
+
+.headerWrapper {
+    display: flex;
+    flex-direction: column;
+    background-image: radial-gradient(ellipse closest-side, rgba(255,255,255,0.075), transparent);
+    /* animation: 2.5s ease-out 2.5s forwards titleTextFadeIn; */
+    /* border-radius: 50%;
+    box-shadow: 0 0 25vw white;
+    background-color: rgba(255,255,255,0.5); */
 }
-@keyframes leftBar
+.headerText, .headerSub {
+    margin: 0;
+    cursor: default;
+    text-align: center;
+    text-shadow: 0 0 5px #000, 4px 4px 10px #000;
+    color: #DDD;
+    position: relative;
+}
+
+.headerText {
+    font-size: calc(2rem + 10vw);
+    /* opacity: 0.1; */
+    font-weight: 700;
+    display: block;
+    animation: 2.5s ease-out forwards titleTextFadeIn;
+}
+.headerTextDelay {
+    animation-delay: 1s;
+    opacity: 0;
+}
+@keyframes titleTextFadeIn
 {
     0% {
-        top: 100%;
+        letter-spacing: 50px;
+        opacity: 0;
+        top: -25px;
+    }
+    10% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
     }
     100% {
+        letter-spacing: 2px;
+        opacity: 1;
         top: 0;
     }
 }
-@keyframes rightBar
+.headerSub {
+    font-size: calc(1.5rem + 1vw);
+    margin-top: 15px;
+    animation: 3s ease-out 2s forwards titleSubFadeIn;
+    opacity: 0;
+}
+@keyframes titleSubFadeIn
 {
     0% {
-        bottom: 100%;
+        letter-spacing: 25px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
     }
     100% {
-        bottom: 0;
+        letter-spacing: 2px;
+        opacity: 1;
     }
+}
+
+
+.square {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    display: inline-block;
+    border: 1.5px solid black;
+    transition: background-color 1s ease-out;
+}
+.square.squareHover, .square.squareHover01, .square.squareHover02 {
+    /* transition: background-color 0.05s ease-out; */
+    transition: none;
+}
+
+.squaresRow {
+    display: flex;
+}
+
+#splash-container {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
