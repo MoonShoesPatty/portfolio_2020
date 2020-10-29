@@ -49,10 +49,15 @@ function initListeners() {
 //  Dialog Open
 // ==================================
 function openScreen(dest) {
-    $('#' + dest).addClass('open');
+    var screen = $('#' + dest);
+    screen.addClass('open');
+    $('.headerWrapper').addClass('hidden');
+    $('.buttonsWrapper').addClass('hidden');
 }
 function closeAllScreens() {
     $('.dialog.open').removeClass('open');
+    $('.headerWrapper').removeClass('hidden');
+    $('.buttonsWrapper').removeClass('hidden');
 }
 // ==================================
 //  Build Functions

@@ -42,6 +42,18 @@ main {
     justify-content: center;
     background-image: radial-gradient(ellipse closest-side, rgba(255,255,255,0.075), transparent);
 }
+.buttonsWrapper {
+    margin-top: 25px;
+}
+.buttonsWrapper, .headerWrapper {
+    position: relative;
+    top: 0;
+    transition: all 0.5s ease-out;
+}
+.headerWrapper.hidden, .buttonsWrapper.hidden {
+    opacity: 0;
+    top: -100vw;
+}
 .headerText, .headerSub {
     margin: 0;
     cursor: default;
@@ -123,9 +135,6 @@ main {
 /* #endregion */
 
 /* #region home screen buttons */
-.buttonsWrapper {
-    margin-top: 25px;
-}
 
 .splashScreenButton {
     outline: none;
@@ -159,7 +168,7 @@ main {
     top: 10px;
     left: calc(50% - 60px);
     z-index: -1;
-    background-image: url('./chevronDown.svg');
+    background-image: url('./images/chevronDown.svg');
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.1;
@@ -189,14 +198,30 @@ main {
 /* #region dialog titles */
 .dialog .contentWrapper
 {
-    margin: 5vh 5vw;
-    height: 90vh;
-    width: 90vw;
+    padding: 25px;
 }
 .dialog h2 {
     /* color: #DDD; */
     margin: 0;
+    margin-top: 5vh;
     font-size: calc(1.8rem + 5vw);
+    display: inline-block
+}
+.dialog p {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-variant: normal;
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    margin: 0;
+}
+.aboutImage {
+    height: auto;
+    float: right;
+    width: 50%;
+    margin: 15px 15px 5px 10px;
+    max-width: 300px;
 }
 /* #endregion */
 .dialog {
@@ -207,14 +232,14 @@ main {
 .dialog.open {
     display: block;
     top: 0;
-    margin: 4vh 4vw;
-    border: white 1px solid;
-    background-color: rgba(0,0,0,0.95);
+    margin: 3vh 3vw;
+    /* border: white 1px solid;
+    background-color: rgba(0,0,0,0.95); */
     position: absolute;
-    height: 92vh;
-    width: 92vw;
+    height: 94vh;
+    max-width: 900px; 
+    width: 94vw;
 }
-
 .backButton {
     color: #DDD;
     position: absolute;
@@ -236,7 +261,7 @@ main {
     height: 25px;
     width: 27px;
     position: absolute;
-    background-image: url('./chevronRight.svg');
+    background-image: url('./images/chevronRight.svg');
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 1;
@@ -252,6 +277,14 @@ main {
 .backButton:hover::after, .backButton:focus::after {
     opacity: 0.6;
     right: -15px;
+}
+.backButton:active::after {
+    opacity: 0.8;
+    transition: all 0.1s ease-out;
+}
+.backButton:active {
+    color: orange;
+    transition: all 0.1s ease-out;
 }
 
 
