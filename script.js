@@ -33,6 +33,26 @@ function initListeners() {
         if (squaresArray[Math.floor(e.clientY / SQUARE_SIZE)] != null && squaresArray[Math.floor(e.clientY / SQUARE_SIZE)][Math.floor(e.clientX / SQUARE_SIZE)] != null)
             squaresArray[Math.floor(e.clientY / SQUARE_SIZE)][Math.floor(e.clientX / SQUARE_SIZE)].hoverHandler();
     });
+    $('button').on('click', function (e) {
+        console.log(this);
+        console.log($(this));
+        if (this.dataset.dest != null) {
+            openScreen(this.dataset.dest);
+        }
+        else {
+            closeAllScreens();
+        }
+        this.blur();
+    });
+}
+// ==================================
+//  Dialog Open
+// ==================================
+function openScreen(dest) {
+    $('#' + dest).addClass('open');
+}
+function closeAllScreens() {
+    $('.dialog.open').removeClass('open');
 }
 // ==================================
 //  Build Functions
