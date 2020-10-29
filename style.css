@@ -227,7 +227,7 @@ main {
 .dialog {
     color: #DDD;
     opacity: 0;
-    display: none;
+    /* display: none; */
     /* duration delay */
     transition: opacity 0.3s 0.2s ease-out;
     top: 100vh;

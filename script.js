@@ -49,7 +49,7 @@ function initListeners() {
 function openScreen(dest) {
     var screen = $('#' + dest);
     screen.addClass('open');
-    screen.attr('tabIndex', 1);
+    screen.find('button').attr('tabIndex', 1);
     var headerWrapper = $('.headerWrapper');
     headerWrapper.addClass('hidden');
     headerWrapper.find('button').attr('tabIndex', -1);
@@ -58,7 +58,7 @@ function openScreen(dest) {
     buttonsWrapper.find('button').attr('tabIndex', -1);
 }
 function closeAllScreens() {
-    $('.dialog.open').removeClass('open').attr('tabIndex', -1);
+    $('.dialog.open').removeClass('open').find('button').attr('tabIndex', -1);
     var headerWrapper = $('.headerWrapper');
     headerWrapper.removeClass('hidden');
     headerWrapper.find('button').attr('tabIndex', 1);
