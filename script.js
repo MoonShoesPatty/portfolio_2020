@@ -34,8 +34,6 @@ function initListeners() {
             squaresArray[Math.floor(e.clientY / SQUARE_SIZE)][Math.floor(e.clientX / SQUARE_SIZE)].hoverHandler();
     });
     $('button').on('click', function (e) {
-        console.log(this);
-        console.log($(this));
         if (this.dataset.dest != null) {
             openScreen(this.dataset.dest);
         }
@@ -51,13 +49,22 @@ function initListeners() {
 function openScreen(dest) {
     var screen = $('#' + dest);
     screen.addClass('open');
-    $('.headerWrapper').addClass('hidden');
-    $('.buttonsWrapper').addClass('hidden');
+    screen.attr('tabIndex', 1);
+    var headerWrapper = $('.headerWrapper');
+    headerWrapper.addClass('hidden');
+    headerWrapper.find('button').attr('tabIndex', -1);
+    var buttonsWrapper = $('.buttonsWrapper');
+    buttonsWrapper.addClass('hidden');
+    buttonsWrapper.find('button').attr('tabIndex', -1);
 }
 function closeAllScreens() {
-    $('.dialog.open').removeClass('open');
-    $('.headerWrapper').removeClass('hidden');
-    $('.buttonsWrapper').removeClass('hidden');
+    $('.dialog.open').removeClass('open').attr('tabIndex', -1);
+    var headerWrapper = $('.headerWrapper');
+    headerWrapper.removeClass('hidden');
+    headerWrapper.find('button').attr('tabIndex', 1);
+    var buttonsWrapper = $('.buttonsWrapper');
+    buttonsWrapper.removeClass('hidden');
+    buttonsWrapper.find('button').attr('tabIndex', 1);
 }
 // ==================================
 //  Build Functions
