@@ -178,11 +178,9 @@ pokedex.elementsToChange = {
 // Pull all names of pokemon in user specified generation
 pokedex.pullNamesList = function() {
     return $.ajax({
+        url: 'https://pokeapi.co/api/v2/pokedex/2/',
         method: 'GET',
-        dataType: 'json',
-        data: {
-            reqUrl: 'https://pokeapi.co/api/v2/pokedex/2/'
-        }
+        dataType: 'json'
     });
 }
 
@@ -202,24 +200,18 @@ pokedex.displayNames = async function() {
 // Pull stats on selected pokemon
 pokedex.pullPokemonInfo = function(pokeNumber) {
     return $.ajax({
+        url: `https://pokeapi.co/api/v2/pokemon/${pokeNumber}/`,
         method: 'GET',
-        dataType: 'json',
-        data: {
-            reqUrl: `https://pokeapi.co/api/v2/pokemon/${pokeNumber}/`
-        }
+        dataType: 'json'
     });
 }
 
 // Pull flavour text, not stored in the same API endpoint for some absurd reason
 pokedex.pullFlavorText = function (pokeNumber) {
     return $.ajax({
-        url: 'http://proxy.hackeryou.com',
+        url: `https://pokeapi.co/api/v2/pokemon-species/${pokeNumber}/`,
         method: 'GET',
-        dataType: 'json',
-        data: {
-            reqUrl: `https://pokeapi.co/api/v2/pokemon-species/${pokeNumber}/`,
-            //useCache: true,
-        }
+        dataType: 'json'
     });
 }
 
