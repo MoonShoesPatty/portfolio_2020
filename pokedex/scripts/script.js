@@ -178,12 +178,10 @@ pokedex.elementsToChange = {
 // Pull all names of pokemon in user specified generation
 pokedex.pullNamesList = function() {
     return $.ajax({
-        url: 'http://proxy.hackeryou.com',
         method: 'GET',
         dataType: 'json',
         data: {
-            reqUrl: 'https://pokeapi.co/api/v2/pokedex/2/',
-            useCache: true,
+            reqUrl: 'https://pokeapi.co/api/v2/pokedex/2/'
         }
     });
 }
@@ -204,12 +202,10 @@ pokedex.displayNames = async function() {
 // Pull stats on selected pokemon
 pokedex.pullPokemonInfo = function(pokeNumber) {
     return $.ajax({
-        url: 'http://proxy.hackeryou.com',
         method: 'GET',
         dataType: 'json',
         data: {
-            reqUrl: `https://pokeapi.co/api/v2/pokemon/${pokeNumber}/`,
-            //useCache: true,
+            reqUrl: `https://pokeapi.co/api/v2/pokemon/${pokeNumber}/`
         }
     });
 }
