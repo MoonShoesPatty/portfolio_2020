@@ -21,21 +21,42 @@
             <button class="splashScreenButton" data-dest="aboutDialog">About</button>
             <button class="splashScreenButton" data-dest="projectsDialog">Projects</button>
         </div>
-        <div class="dialog" id="aboutDialog">
+        <section class="dialog" id="aboutDialog">
             <div class="contentWrapper">
                 <h2>About</h2>
                 <img class="aboutImage" src="./images/PJ_HeadshotSquare.jpg" alt="Patrick Johnston headshot">
                 <p>I am an accomplished programmer, with strong critical thinking skills and the ability to quickly understand new concepts. I am seeking an opportunity which challenges my existing skill set and allows me to further develop my expertise in the industry.</p>
             </div>
             <button class="backButton" tabindex="-1">Back</button>
-        </div>
-        <div class="dialog" id="projectsDialog">
+        </section>
+        <section class="dialog" id="projectsDialog">
             <div class="contentWrapper">
                 <h2>Projects</h2>
-                <p>lorem</p>
+                <section class="projectItem">
+                    <div class="projectItemWrapper clearfix">
+                        <img src="./images/project_jumpman.png" alt="Project screenshot: Jump Man Game">
+                        <h3>Jump Man</h3>
+                        <p>A game.</p>
+                    </div>
+                    <div class="projectItemButtons">
+                        <a href="">View Live</a>
+                        <a href="">View GitHub</a>
+                    </div>
+                </section>
+                <section class="projectItem">
+                    <div class="projectItemWrapper clearfix">
+                        <img src="./images/project_pokedex.png" alt="Project screenshot: Pokedex">
+                        <h3>Pokedex</h3>
+                        <p>A pokedex.</p>
+                    </div>
+                    <div class="projectItemButtons">
+                        <a href="">View Live</a>
+                        <a href="">View GitHub</a>
+                    </div>
+                </section>
             </div>
             <button class="backButton" tabindex="-1">Back</button>
-        </div>
+        </section>
     </main>
     <script src="jQuery.js"></script>
     <script src="script.js"></script>

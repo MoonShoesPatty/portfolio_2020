@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+        }
+        .pokeball {
+            height: 400px;
+            width: 400px;
+            background-color: #12B4E9;
+            clip-path: url('pokeballTop.html')
+        }
+        .pokeballSVG {
+            background-color: red;
+        }
+        html{
+  height:100%;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+body{
+  padding-top:200px;
+  padding-left:100px;
+  height:100%;
+  font-family: 'Open Sans', sans-serif;
+  background: #405182;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+}
+
+#scene{
+    
+}
+
+#pokeBall{
+  transform:scale(.75);
+  margin-left:100px;
+  position:relevant;
+}
+
+#lid{
+  position:absolute;
+  margin-top:-203px;
+  z-index:-2;
+}
+
+#bottom{
+  margin-top:207px;
+  z-index:999;
+  position:absolute;
+}
+
+#middle{
+  position:absolute;
+  margin-top:123px;
+  margin-left:-2.5px;
+  z-index:-1;
+}
+
+#button{
+  position:absolute;
+  margin-top:145px;
+  margin-left:143px;
+  cursor:pointer;
+}
+#shadow{
+  background:rgba(0,0,0,.2);
+  width:200px;
+  height:20px;
+  border-radius:50%;
+  margin-top:360px;
+  margin-left:80px;
+  position:absolute;
+  transform: scale(1);
+}
+    </style>
+</head>
+<body>
+    <!-- <div class="pokeball"></div> -->
+    <!-- <use xlink:href="pokeballTop.html" class="pokeballSVG"></use> -->
+    <div id="pokeBall">
+    
+        <svg version="1.1" id="lid" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="362.835px" height="363.834px" viewBox="0 0 362.835 363.834" enable-background="new 0 0 362.835 363.834" xml:space="preserve">
+            <path id="open" display="none" fill="#D64544" d="M362.835,181.417c0,100.194-81.224,181.418-181.418,181.418	C81.224,362.835,0,281.611,0,181.417C0,81.223,81.224,0,181.417,0C281.611,0,362.835,81.223,362.835,181.417z"
+            />
+            <path id="closed" fill="#D64544" d="M0,363.834c0-100.194,81.223-181.417,181.417-181.417c100.194,0,181.418,81.223,181.418,181.417
+    	H0z" />
+            <path id="openInside" display="none" fill="#B83E3F" d="M353.835,181.834c0,94.993-77.007,172-172,172c-94.993,0-172-77.007-172-172
+    	s77.007-172,172-172C276.828,9.834,353.835,86.841,353.835,181.834z" />
+            <path id="closedInside" fill="#B83E3F" d="M353.835,363.677c0,0.087-77.007,0.157-172,0.157c-94.993,0-172-0.07-172-0.157
+    	c0-0.087,77.007-0.158,172-0.158C276.828,363.52,353.835,363.59,353.835,363.677z" />
+            <path id="holeClosed" fill="#B83E3F" d="M125.068,363.834c9.676-21.34,31.166-36.183,56.122-36.183
+    	c24.955,0,46.444,14.842,56.121,36.18" />
+            <path id="holeOpen" display="none" fill="#B83E3F" d="M125.068,20.168c9.676-5.613,31.166-9.517,56.122-9.517
+    	c24.955,0,46.444,3.904,56.121,9.516" />
+        </svg>
+    </div>
+</body>
+</html>

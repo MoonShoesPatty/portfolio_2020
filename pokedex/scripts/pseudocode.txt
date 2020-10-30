@@ -1,0 +1,17 @@
+Pull list of pokemon (limited to gen 1)
+
+Display in list
+    - scrollable independent from display information
+
+Allow user selection of item in pokemon list
+
+Pull information on selected pokemon
+
+Display pokemon & information
+    - image
+    - Number
+    - Name
+    - description
+    - height
+    - weight
+    - type
