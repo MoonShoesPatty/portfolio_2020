@@ -226,6 +226,7 @@ pokedex.displayPokemonInfo = async function(pokeNumber) {
     flavorTextReturn.flavor_text_entries.forEach(function(element) {
         if (element.version.name === "red" && element.language.name === "en") {
             correctFlavorText = element.flavor_text;
+            
         }
     });
     // Object holding all stats to display
