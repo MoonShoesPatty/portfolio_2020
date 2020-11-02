@@ -50,15 +50,18 @@ function openScreen(dest) {
     var screen = $('#' + dest);
     screen.addClass('open');
     screen.find('button').attr('tabIndex', 1);
+    screen.find('a').attr('tabIndex', 1);
     var headerWrapper = $('.headerWrapper');
     headerWrapper.addClass('hidden');
     headerWrapper.find('button').attr('tabIndex', -1);
     var buttonsWrapper = $('.buttonsWrapper');
     buttonsWrapper.addClass('hidden');
-    buttonsWrapper.find('button').attr('tabIndex', -1);
 }
 function closeAllScreens() {
-    $('.dialog.open').removeClass('open').find('button').attr('tabIndex', -1);
+    var openDialog = $('.dialog.open');
+    openDialog.removeClass('open');
+    openDialog.find('button').attr('tabIndex', -1);
+    openDialog.find('a').attr('tabIndex', -1);
     var headerWrapper = $('.headerWrapper');
     headerWrapper.removeClass('hidden');
     headerWrapper.find('button').attr('tabIndex', 1);

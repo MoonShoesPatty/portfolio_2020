@@ -693,7 +693,7 @@ const player = {
 		}
 		// D for SHOOT
 		if (keys[68]) {
-			shoot();
+			// shoot();
 		}
 		// S switches gravity
 		if (keys[83] && gravSwitch < 0) {
