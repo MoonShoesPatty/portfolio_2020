@@ -149,6 +149,7 @@ main {
     font-size: 1.2rem;
     letter-spacing: 1px;
     padding: 6px;
+    opacity: 0;
     padding-top: 10px;
     position: relative;
     margin-right: 25px;
@@ -157,8 +158,10 @@ main {
     text-shadow: 2px 2px 6px #000;
     width: 120px;
     text-align: center;
+    animation: 1s ease-out 3.5s forwards splashButtonFadeDown;
 }
 .splashScreenButton:last-child {
+    animation-delay: 4s;
     margin-right: 0;
 }
 .splashScreenButton::after {
@@ -166,7 +169,6 @@ main {
     display: inline-block;
     height: 50px;
     width: 120px;
-    /* background-color: red; */
     position: absolute;
     top: 10px;
     left: calc(50% - 60px);
@@ -175,7 +177,6 @@ main {
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.1;
-    /* background-fill: green; */
     transition: all 0.5s ease-out;
 }
 .splashScreenButton:hover::after, .splashScreenButton:focus::after {
@@ -193,6 +194,18 @@ main {
 .splashScreenButton:active {
     color: orange;
     transition: all 0.1s ease-out;
+}
+@keyframes splashButtonFadeDown
+{
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* #endregion */

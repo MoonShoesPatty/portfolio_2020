@@ -965,9 +965,9 @@ function startScreen() {
 
 	// Score
 	ctx.textAlign = 'center';
-	ctx.fillText(`Jump Man II:`, gameWidth / 2, gameHeight / 2 - 100);
+	ctx.fillText(`Jump Man:`, gameWidth / 2, gameHeight / 2 - 100);
 	ctx.font = "32px 'Press Start 2P'";
-	ctx.fillText(`Revenge of the Hurdles`, gameWidth / 2, gameHeight / 2);
+	ctx.fillText(`The Man Who Jumps`, gameWidth / 2, gameHeight / 2);
 
 	ctx.font = "24px 'Press Start 2P'";
 	ctx.fillText(`Press space to start`, gameWidth / 2, gameHeight / 2 + 150);
