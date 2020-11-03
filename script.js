@@ -56,6 +56,7 @@ function openScreen(dest) {
     headerWrapper.find('button').attr('tabIndex', -1);
     var buttonsWrapper = $('.buttonsWrapper');
     buttonsWrapper.addClass('hidden');
+    buttonsWrapper.find('button').attr('tabIndex', -1);
 }
 function closeAllScreens() {
     var openDialog = $('.dialog.open');
