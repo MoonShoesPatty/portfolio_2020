@@ -71,6 +71,15 @@ function closeAllScreens() {
     buttonsWrapper.find('button').attr('tabIndex', 1);
 }
 // ==================================
+//  Scroll Handler
+// ==================================
+// function handleScroll(): void {
+//     $('#projectsDialog .contentWrapper').addClass('scrolling');
+//     setTimeout(function(){
+//         $('#projectsDialog .contentWrapper').removeClass('scrolling');
+//     }, 1000);
+// }
+// ==================================
 //  Build Functions
 // ==================================
 function createSquares() {

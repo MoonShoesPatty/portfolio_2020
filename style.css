@@ -202,13 +202,20 @@ main {
 .dialog .contentWrapper
 {
     padding: 25px;
+    position: relative;
+    margin: 3vh 3vw;
+    min-height: 100vh;
+    max-width: 900px;
+    width: 100vw;
+    margin: 0 auto;
 }
+
 .dialog h2 {
     /* color: #DDD; */
     margin: 0;
     margin-top: 5vh;
     font-size: calc(1.8rem + 5vw);
-    display: inline-block
+    display: inline-block;
 }
 .dialog p {
     font-size: 1rem;
@@ -234,29 +241,57 @@ main {
     transition: opacity 0.3s 0.2s ease-out;
     top: 100vh;
     position: absolute;
-    margin: 3vh 3vw;
-    height: 94vh;
-    max-width: 900px; 
-    width: 94vw;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
 }
-
 .dialog.open {
     display: block;
     opacity: 1;
     top: 0;
 }
+
+/* ----- SCROLL BAR STYLING -----*/
+.dialog::-webkit-scrollbar
+{
+    position: absolute;
+    right: 0;
+    /* top: 0; */
+    width: 10px;
+}
+
+.dialog::-webkit-scrollbar-track
+{
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.dialog::-webkit-scrollbar-thumb
+{
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* .dialog.scrolling::-webkit-scrollbar-thumb
+{
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.75s linear;
+} */
+
 .backButton {
     color: #DDD;
     position: absolute;
     right: 0;
     bottom: 0;
-    margin-right: 15px;
-    margin: 0 25px 15px 0;
+    margin: 0 25px 25px 0;
+    /* margin-right: calc(900px + (50vw - 900px)); */
     border: none;
     background: none;
     text-transform: uppercase;
     outline: none;
     transition: all 0.4s ease-out;
+    text-shadow: 2px 0 2px black, 0 2px 2px black, -2px 0 2px black, 0 -2px 2px black;
     font-size: 1.2rem;
     padding: 10px 10px 0 0;
 }
@@ -291,12 +326,24 @@ main {
     color: orange;
     transition: all 0.1s ease-out;
 }
+/* @media (min-width: 900px) {
+    .backButton {
+        right: calc(900px - 50vw);
+    }
+    .backButton:hover, .backButton:focus {
+        right: calc(25vw + 5px);
+    }
+} */
 /* #endregion */
 
 /* #region projects */
 .projectItem {
     text-shadow: 0 0 5px #000, 2px 2px 5px #000;
     margin-top: 50px;
+}
+.projectItem:last-of-type
+{
+    margin-bottom: 40px;
 }
 .projectItem img {
     width: 30vw;
