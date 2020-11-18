@@ -246,6 +246,9 @@ main {
     margin: 15px 15px 5px 10px;
     max-width: 300px;
 }
+.aboutDialog p {
+    margin-bottom: 25px;
+}
 /* #endregion */
 
 .dialog {
@@ -257,6 +260,7 @@ main {
     height: 100vh;
     width: 100vw;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .dialog.open {
     display: block;
@@ -339,14 +343,6 @@ main {
     color: orange;
     transition: all 0.1s ease-out;
 }
-/* @media (min-width: 900px) {
-    .backButton {
-        right: calc(900px - 50vw);
-    }
-    .backButton:hover, .backButton:focus {
-        right: calc(25vw + 5px);
-    }
-} */
 /* #endregion */
 
 /* #region projects */
@@ -374,16 +370,15 @@ main {
     display: flex;
     justify-content: center;
 }
-.projectItem a {
-}
-.projectItem a:first-child {
-    margin-right: 40px;
+
+a:focus {
+    outline: none;
 }
 
-.projectItem a {
+.arrowLink {
     color: #DDD;
     position: relative;
-    margin: 0 25px 15px 0;
+    margin: 0 40px 15px 0;
     left: 0;
     border: none;
     background: none;
@@ -395,8 +390,15 @@ main {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-variant: normal;
+    /* margin-right: 40px; */
 }
-.projectItem a::after {
+.aboutDialog .arrowLink {
+    margin-right: 25px;
+}
+.arrowLink:last-child {
+    margin-right: 0;
+}
+.arrowLink::after {
     content: '';
     display: inline-block;
     height: 25px;
@@ -411,20 +413,38 @@ main {
     right: -5px;
     opacity: 0.1;
 }
-.projectItem a:hover, .projectItem a:focus {
+.arrowLink:hover, .arrowLink:focus {
     color: #12B4E9;
     left: -5px;
 }
-.projectItem a:hover::after, .projectItem a:focus::after {
+.arrowLink:hover::after, .arrowLink:focus::after {
     opacity: 0.6;
     right: -15px;
 }
-.projectItem a:active::after {
+.arrowLink:active::after {
     opacity: 0.8;
     transition: all 0.1s ease-out;
 }
-.projectItem a:active {
+.arrowLink:active {
     color: orange;
     transition: all 0.1s ease-out;
+}
+
+.aboutLinkGroup {
+    margin: 40px 0;
+}
+
+.inlineLink {
+    color: #12B4E9;
+    transition: all 0.4s ease-out;
+}
+.inlineLink:visited {
+    color: #12B4E9;
+}
+.inlineLink:hover, .inlineLink:focus {
+    color: orange;
+}
+.inlineLink:active {
+    color: white;
 }
 /* #endregion */
