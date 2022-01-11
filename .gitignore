@@ -1,0 +1,10 @@
+index_old.html
+style_old.css
+tsconfig.json
+script.ts
+PSDs/*
+node_modules/*
+pokedex/styles/partials/*
+pokedex/styles/style.scss
+images/ResponsiveFull.png
+images/reactFull.png
